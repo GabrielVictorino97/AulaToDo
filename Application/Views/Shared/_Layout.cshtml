@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Application</title>
+    <link href="~/lib/bootstrap4/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/css/site.css" />
+    
+</head>
+<body>
+    <header>
+     
+    </header>
+    <div class="container mt-5">
+        <main role="main" class="pb-3">
+            @Application.Models.Notification.Get(TempData)
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/bootstrap4/dist/js/bootstrap.min.js"></script>
+
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
